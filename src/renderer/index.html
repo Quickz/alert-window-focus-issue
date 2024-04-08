@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Electron</title>
+  </head>
+  <body>
+    <input type="text" placeholder="Enter some text" autofocus>
+    <button onclick="generateAlert()">Generate Alert</button>
+
+    <p><b>Reproduction steps:</b></p>
+    <ol>
+      <li>Enter "123" in the input field</li>
+      <li>Click "Generate Alert"</li>
+      <li>Close the alert</li>
+      <li>Click on the input</li>
+      <li>Try entering "555"</li>
+    </ol>
+    <p>
+      <b>Result: </b>the field remains unchanged
+    </p>
+    <p>
+      <b>Expected: </b>the field to get focused on, upon the click and receive the updated input
+    </p>
+
+    <script src="./src/renderer.js"></script>
+    <script>
+      function generateAlert()
+      {
+        alert("test");
+      }
+    </script>
+  </body>
+</html>
